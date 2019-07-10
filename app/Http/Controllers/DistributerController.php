@@ -57,9 +57,9 @@ class DistributerController extends Controller
         'adresa_kb'=>'required|numeric|digits:2',
         'ptt'=>'required|numeric|digits:5',
         'oib'=>'required|unique:distributeri|digits:11',
-        'tel'=>'numeric|nullable',
-        'mobitel'=>'numeric|nullable',
-        'fax'=>'numeric|nullable',
+        'tel'=>'digits_between:5,15|nullable',
+        'mobitel'=>'digits_between:5,15|nullable',
+        'fax'=>'digits_between:5,15|nullable',
         'email'=>'required|unique:distributeri|email'
     ]);
 

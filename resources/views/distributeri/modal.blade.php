@@ -17,7 +17,7 @@
             <label for="naziv">Naziv Distributera</label>
             <input type="text"id="naziv"name="naziv"class="form-control"value={{old('naziv')}}>
 
-            <input type="hidden" name="user_id" id="user_id"value="1">
+              <input type="hidden" name="user_id" id="user_id"value="{{Auth::user()->id}}">
 
             <label for="adresa">Adresa Distributera</label>
             <input type="text"id="naziv"name="adresa"class="form-control"value={{old('adresa')}}>

@@ -22,7 +22,7 @@ Route::patch('distributer/{id}' , 'DistributerController@izmjeni')->name('distri
 
 Route::resource('artikli' , 'ArtiklController');
 
-Auth::routes();
+
 
 Route::get('admin', 'AdminController@index')->name('admin');
 
@@ -31,5 +31,10 @@ Route::get('prikaz/{id}' , 'DistributerController@prikaz')->name('prikaz');
 
 
 
-
+Route::get('registracija' , 'AdminController@prikaziRegistraciju')->name('prikaziRegistraciju');
 Route::post('registracija','AdminController@registracija')->name('registracija');
+
+Route::get('logina' , 'AdminController@prikaziLogin')->name('prikaziLogina');
+Route::post('logina' , 'AdminController@login')->name('logina');
+
+Route::post('logouta' , 'AdminController@logouta')->name('logouta');

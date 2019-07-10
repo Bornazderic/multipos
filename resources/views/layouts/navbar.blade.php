@@ -64,13 +64,22 @@ header .highlight , header .current a {
                 <h1><span class="highlight">Multi</span>pos</h1>
             </div>
             <nav>
-                <ul>
-                    <li><a class="current"href="/">Home</a></li>
-                    <li><a href="{{route('login')}}">Prijavi se</a></li>
-                    <li><a href="{{route('register')}}">Registriraj se</a></li>
-                    <li><p></p></li>
-                </ul>
-            </nav>
+                    <ul>
+                        @if(Auth::check())
+                        <li><a class="current"href="/">Home</a></li>
+                        
+                        <li><a href="{{route('admin')}}">Admin</a></li>
+                        <li>Dobrodošli {{Auth::user()->prezime.','.Auth::user()->ime}}</li>
+                        <li><form action="{{route('logouta')}}"method="POST"id="logout-form">
+                        @csrf
+                        <a href="#" onclick="document.getElementById('logout-form').submit()">Logout</a>
+                        </form></li>
+                        @else
+                        <li><a href="{{route('prikaziLogina')}}">Prijavi se</a></li>
+                        <li><a href="{{route('prikaziRegistraciju')}}">Registriraj se</a></li>
+                        @endif
+                    </ul>
+                </nav>
            
         </div>
     </header>

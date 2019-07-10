@@ -8,7 +8,8 @@
     @csrf
     
     
-  
+    <label for="sifra_art">sifra_art</label>
+    <input type="text"name="sifra_art"id="sifra_art"class="form-control"value="{{old('sifra_art')}}">
 
     <label for="naziv">Naziv</label>
     <input type="text"name="naziv"id="naziv"class="form-control"value="{{old('naziv')}}">

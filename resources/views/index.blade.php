@@ -107,9 +107,15 @@
             
             <nav>
                 <ul>
+                    @if(Auth::check())
                     <li><a class="current"href="/">Home</a></li>
-                    <li><a href="{{route('login')}}">Prijavi se</a></li>
-                    <li><a href="{{route('register')}}">Registriraj se</a></li>
+                    
+                    <li><a href="{{route('admin')}}">Admin</a></li>
+                    <li>Dobrodošli {{Auth::user()->prezime.','.Auth::user()->ime}}</li>
+                    @else
+                    <li><a href="{{route('prikaziLogina')}}">Prijavi se</a></li>
+                    <li><a href="{{route('prikaziRegistraciju')}}">Registriraj se</a></li>
+                    @endif
                 </ul>
             </nav>
         

@@ -81,7 +81,7 @@ class ArtiklController extends Controller
         $artikl = new Artikli;
 
 
-        $artikl->sifra_art = $request->input('naziv');
+        $artikl->sifra_art = $request->input('sifra_art');
         
         $artikl->dp = $request->input('dp');
         $artikl->naziv = $request->input('naziv');
