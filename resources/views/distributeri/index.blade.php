@@ -37,7 +37,7 @@
 
 
 @include('distributeri.modal')
-
+@includeWhen(!empty($distributer), 'distributeri.modal2')
 @endsection
   
 

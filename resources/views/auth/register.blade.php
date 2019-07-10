@@ -1,16 +1,17 @@
 @extends('layouts.app')
-
+@extends('layouts.navbar')
 @section('content')
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+                <div class="card-header">{{ __('Register') }} </div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('registracija') }}">
                         @csrf
-
+                        @include('inc.message')
                         <div class="form-group row">
                             <label for="ime" class="col-md-4 col-form-label text-md-right">{{ __('Ime') }}</label>
 
@@ -86,5 +87,8 @@
             </div>
         </div>
     </div>
+    
+        
+    
 </div>
 @endsection

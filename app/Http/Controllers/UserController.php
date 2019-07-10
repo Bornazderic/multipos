@@ -13,10 +13,5 @@ class UserController extends Controller
         return view('index');
     }
     
-    public function registracija(Request $request){
-
-        $user = User::create($request->all());
-            return view('admin.index');
-        
-    }
+   
 }

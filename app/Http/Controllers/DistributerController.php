@@ -51,10 +51,31 @@ class DistributerController extends Controller
    public function store(Request $request)
    {
     
-        $distributer = Distributer::create($request->all());
-        // $user = Auth::user()->id->save();
-         //return $distributer;
-        
+    $this->validate($request , [
+        'naziv'=>'required|max:191',
+        'adresa'=>'required|max:191',
+        'adresa_kb'=>'required|numeric|digits:2',
+        'ptt'=>'required|numeric|digits:5',
+        'oib'=>'required|unique:distributeri|digits:11',
+        'tel'=>'numeric|nullable',
+        'mobitel'=>'numeric|nullable',
+        'fax'=>'numeric|nullable',
+        'email'=>'required|unique:distributeri|email'
+    ]);
+
+      $distributer = new Distributer;
+
+      $distributer->naziv = $request->input('naziv');
+      $distributer->user_id =$request->input('user_id');
+      $distributer->adresa = $request->input('adresa');
+      $distributer->adresa_kb = $request->input('adresa_kb');
+      $distributer->ptt = $request->input('ptt');
+      $distributer->oib = $request->input('oib');
+      $distributer->tel = $request->input('tel');
+      $distributer->mobitel = $request->input('mobitel');
+      $distributer->fax = $request->input('fax');
+      $distributer->email = $request->input('email');
+      $distributer->save();
 
         return redirect()->back()->with(['success'=>'Uspjesno dodan distributer'
         ]);

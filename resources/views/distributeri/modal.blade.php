@@ -15,34 +15,34 @@
              
             
             <label for="naziv">Naziv Distributera</label>
-            <input type="text"id="naziv"name="naziv"class="form-control">
+            <input type="text"id="naziv"name="naziv"class="form-control"value={{old('naziv')}}>
 
             <input type="hidden" name="user_id" id="user_id"value="1">
 
             <label for="adresa">Adresa Distributera</label>
-            <input type="text"id="naziv"name="adresa"class="form-control">
+            <input type="text"id="naziv"name="adresa"class="form-control"value={{old('adresa')}}>
 
             <label for="adresa_kb">Kucni Broj</label>
-            <input type="number" name="adresa_kb" id="adresa_kb"class="form-control">
+            <input type="number" name="adresa_kb" id="adresa_kb"class="form-control"value={{old('adresa_kb')}}>
 
             <label for="ptt">Postanski Broj</label>
-            <input type="text" name="ptt" id="ptt"class="form-control">
+            <input type="text" name="ptt" id="ptt"class="form-control"value={{old('ptt')}}>
 
             <label for="oib">OIB</label>
-            <input type="text" name="oib" id="oib"class="form-control">
+            <input type="text" name="oib" id="oib"class="form-control"value={{old('oib')}}>
 
             <label for="mobitel">Mobitel</label>
-            <input type="text" name="mobitel" id="mobitel"class="form-control">
+            <input type="text" name="mobitel" id="mobitel"class="form-control"value={{old('mobitel')}}>
 
             <label for="tel">Telefon</label>
-            <input type="text" name="tel" id="tel"class="form-control">
+            <input type="text" name="tel" id="tel"class="form-control"value={{old('tel')}}>
             
             <label for="fax">Fax</label>
-            <input type="text" name="fax" id="fax"class="form-control">
+            <input type="text" name="fax" id="fax"class="form-control"value={{old('fax')}}>
 
             
             <label for="email">E-mail Adresa</label>
-            <input type="email" name="email" id="email"class="form-control">
+            <input type="email" name="email" id="email"class="form-control"value={{old('email')}}>
 
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

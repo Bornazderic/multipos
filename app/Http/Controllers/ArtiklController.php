@@ -53,7 +53,7 @@ class ArtiklController extends Controller
             'eancode_art'=>'required|digits:13',
             'jmj'=>'required',
             'jmj2'=>'required',
-            'cijena1'=>'numeric|integer',
+            'cijena1'=>'required|numeric|integer',
             'cijena2'=>'numeric|integer',
             'pdv'=>'nullable|numeric',
             'slika'=>'image|nullable|max:1999',

@@ -98,19 +98,21 @@
     </style>
 </head>
 <body>
+    @include('inc.message')
     <header>
         <div class="container">
             <div id ="branding">
                 <h1><span class="highlight">Multi</span>pos</h1>
             </div>
+            
             <nav>
                 <ul>
                     <li><a class="current"href="/">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="{{route('admin')}}">Admin Dashboard</a></li>
+                    <li><a href="{{route('login')}}">Prijavi se</a></li>
+                    <li><a href="{{route('register')}}">Registriraj se</a></li>
                 </ul>
             </nav>
-           
+        
         </div>
     </header>
 

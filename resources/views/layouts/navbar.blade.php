@@ -1,6 +1,8 @@
 <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <style>body{
+    <style>
+    
+    body{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     line-height: 1,5;
@@ -64,8 +66,9 @@ header .highlight , header .current a {
             <nav>
                 <ul>
                     <li><a class="current"href="/">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="{{route('admin')}}">Admin Dashboard</a></li>
+                    <li><a href="{{route('login')}}">Prijavi se</a></li>
+                    <li><a href="{{route('register')}}">Registriraj se</a></li>
+                    <li><p></p></li>
                 </ul>
             </nav>
            

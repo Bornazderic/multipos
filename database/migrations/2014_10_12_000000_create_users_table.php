@@ -33,10 +33,10 @@ class CreateUsersTable extends Migration
             $table->string('adresa');
             $table->integer('ptt');
             $table->integer('adresa_kb');
-            $table->integer('oib')->unique();
-            $table->integer('tel');
-            $table->integer('fax');
-            $table->integer('mobitel');
+            $table->bigInteger('oib')->unique();
+            $table->integer('tel')->nullable();
+            $table->integer('fax')->nullable();
+            $table->integer('mobitel')->nullable();
             $table->string('email')->unique();
             $table->timestamps();
 
@@ -52,9 +52,9 @@ class CreateUsersTable extends Migration
             $table->enum('jmj',['kom' , 'lit' , 'kg']);
             $table->enum('jmj2',['1','2','4','8','12','24']);
             $table->double('cijena1');
-            $table->double('cijena2');
-            $table->integer('pdv');
-            $table->text('slika');
+            $table->double('cijena2')->nullable();
+            $table->integer('pdv')->nullable();
+            $table->text('slika')->nullable();
             $table->timestamps();
 
             $table->foreign('dp')->references('id_dp')->on('distributeri')->onDelete('cascade');
